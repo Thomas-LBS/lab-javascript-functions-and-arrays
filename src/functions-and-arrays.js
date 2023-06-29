@@ -125,7 +125,23 @@ function averageWordLength(words) {
 
 
 // Bonus - Iteration #4.1
-function avg() {}
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function avg(Arr) {
+  const calculateAverage = arr => {
+    let sum = 0, count = 0;
+    for(let i = 0; i < arr.length; i++){
+       const val = parseInt(arr[i]);
+       if(val){
+          sum += val;
+          count++;
+       };
+    };
+    return (sum / count);
+ };
+ console.log(calculateAverage(arr));
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -176,6 +192,9 @@ function doesWordExist(words, wordToSearch) {
 return false; 
 }
 
+  if (wordsArr <= 0){return null}
+  else return wordsArr.includes(wordSearch)
+}
 
 
 // Iteration #7: Count repetition
